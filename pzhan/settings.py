@@ -64,9 +64,17 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-#    'pzhan.pipelines.PzhanPipeline': 300,
-     'scrapy.contrib.pipeline.images.ImagesPipeline': 1,
+   'pzhan.pipelines.PzhanPipeline': 1,
+   # 'scrapy.contrib.pipeline.images.ImagesPipeline': 1,
+   #  'scrapy.pipelines.images.ImagesPipeline':2,
+    'pzhan.pipelines.PzhanImagePipeline': 3,
+
+#     'pzhan.pipelines.ArticleImagePipeline': 300,
+    # 'pzhan.pipelines.JsonWithEncodingPipeline': 400,
+    # 'pzhan.pipelines.MysqlPipeline': 400,
+
 }
+# IMAGES_URLS_FIELD = "front_image_url"
 IMAGES_STORE = 'C:\\Users\\Administrator\\Desktop'
 
 # Enable and configure the AutoThrottle extension (disabled by default)

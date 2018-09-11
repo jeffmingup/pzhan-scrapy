@@ -1,3 +1,4 @@
-from scrapy import cmdline
-
-cmdline.execute('scrapy crawl pzhan'.split())
+username = input('Enter username: ')
+B = input('Enter B: ')
+print(username)
+print (B)
